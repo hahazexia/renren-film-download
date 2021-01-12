@@ -1,0 +1,22 @@
+{
+  "name": "renren-film-download",
+  "version": "1.0.0",
+  "description": "download renren films",
+  "main": "index.js",
+  "scripts": {
+    "build:main": "webpack --config ./webpack.config.main.js --mode production"
+  },
+  "keywords": [
+    "renren"
+  ],
+  "author": "hahazexia",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^7.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1"
+  }
+}
