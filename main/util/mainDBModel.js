@@ -45,6 +45,13 @@ function mainDB () {
                 }
             });
             console.log(num, 'num 哈哈哈')
+
+            let a = await Renren.findOne({
+                where: {
+                    id: 10004
+                }
+            })
+            console.log(a, 'a')
             await Promise.all([
                 Renren.sync()
             ]);
