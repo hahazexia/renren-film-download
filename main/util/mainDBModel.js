@@ -8,6 +8,7 @@ function mainDB () {
     sequelizeObject = null;
 
     return async function () {
+        const Op = Sequelize.Op;
         if (sequelizeObject) {
             return {
                 Renren
@@ -27,15 +28,23 @@ function mainDB () {
                 logging: false
             });
 
-            Renren = sequelizeObject.define('yyets_resource', {
+            Renren = sequelizeObject.define('yyets_resources', {
                 id: {type: Sequelize.INTEGER, primaryKey: true},
-                url: {type: Sequelize.STRING},
-                name: {type: Sequelize.STRING},
+                url: {type: Sequelize.TEXT},
+                name: {type: Sequelize.TEXT},
                 time1: {type: Sequelize.INTEGER},
-                time1: {type: Sequelize.STRING},
+                time2: {type: Sequelize.TEXT},
                 data: {type: Sequelize.TEXT},
             });
 
+            let num = await Renren.count({
+                where: {
+                    id: {
+                        [Op.ne]: ''
+                    }
+                }
+            });
+            console.log(num, 'num 哈哈哈')
             await Promise.all([
                 Renren.sync()
             ]);
