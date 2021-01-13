@@ -9,7 +9,7 @@ module.exports = {
   devtool: 'cheap-source-map',
   mode: 'production',
   target: 'electron-main',
-  entry: path.resolve(__dirname, './index.js'),
+  entry: path.resolve(__dirname, './main/index.js'),
   output: {
     path: path.join(__dirname, './app'),
     filename: 'index.js',
@@ -57,10 +57,6 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        {
-          from: path.resolve(__dirname, './page'),
-          to: path.join(__dirname, './app/page')
-        },
         {
           from: path.resolve(__dirname, './package.json'),
           to: path.join(__dirname, './app')

@@ -1,5 +1,5 @@
 import { app } from 'electron'
-import { createMainWindow } from './windows'
+import { createMainWindow } from './util/windows'
 
 const gotTheLock = app.requestSingleInstanceLock();
 if (!gotTheLock) {
