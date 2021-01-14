@@ -11,7 +11,6 @@ function mainIPC () {
 
         return result
     });
-    //const result = await ipcRenderer.invoke('searchFilm', {keyWord: ''})
 }
 
 export default mainIPC

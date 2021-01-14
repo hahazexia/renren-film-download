@@ -30,10 +30,10 @@ function mainDB () {
 
             Renren = sequelizeObject.define('yyets_resources', {
                 id: {type: Sequelize.INTEGER, primaryKey: true},
-                url: {type: Sequelize.STRING},
-                name: {type: Sequelize.STRING},
+                url: {type: Sequelize.TEXT},
+                name: {type: Sequelize.TEXT},
                 time1: {type: Sequelize.INTEGER},
-                time2: {type: Sequelize.STRING},
+                time2: {type: Sequelize.TEXT},
                 data: {type: Sequelize.TEXT},
             });
 

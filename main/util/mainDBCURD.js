@@ -21,11 +21,15 @@ function mainDBCURD () {
                 let response = null;
 
                 try {
-                    const result = await Renren.findOne({
+                    const result = await Renren.findAll({
                         raw: true,
                         where: {
                             name: {
-                                [Op.like]: '%' + arg.keyWord + '%'
+                                [Op.or]: {
+                                    [Op.like]: '%' + arg.keyWord,
+                                    [Op.substring]: arg.keyWord,
+                                    [Op.like]: '%' + arg.keyWord + '%',
+                                }
                             }
                         }
                     });

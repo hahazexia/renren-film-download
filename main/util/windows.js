@@ -6,8 +6,8 @@ function createMainWindow () {
         width: 800,
         height: 500,
         center: true,
-        resizable: false,
-        frame: false,
+        resizable: true,
+        frame: true,
         hasShadow: true,
         show: false,
         webPreferences: {

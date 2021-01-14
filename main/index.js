@@ -1,4 +1,4 @@
-import { app } from 'electron'
+import { app, Menu } from 'electron'
 import { createMainWindow } from './util/windows'
 import mainIPC from './util/mainIPC'
 
@@ -10,8 +10,9 @@ if (!gotTheLock) {
 }
 
 async function appInit () {
+    mainIPC();
     createMainWindow();
-
+    Menu.setApplicationMenu(null)
 }
 
 app.on('window-all-closed', function () {
