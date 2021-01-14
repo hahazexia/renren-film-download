@@ -1,6 +1,6 @@
 import { app } from 'electron'
 import { createMainWindow } from './util/windows'
-import initMainDB from './util/mainDBModel'
+import mainIPC from './util/mainIPC'
 
 const gotTheLock = app.requestSingleInstanceLock();
 if (!gotTheLock) {
@@ -12,7 +12,6 @@ if (!gotTheLock) {
 async function appInit () {
     createMainWindow();
 
-    await initMainDB();
 }
 
 app.on('window-all-closed', function () {

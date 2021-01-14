@@ -30,32 +30,16 @@ function mainDB () {
 
             Renren = sequelizeObject.define('yyets_resources', {
                 id: {type: Sequelize.INTEGER, primaryKey: true},
-                url: {type: Sequelize.TEXT},
-                name: {type: Sequelize.TEXT},
+                url: {type: Sequelize.STRING},
+                name: {type: Sequelize.STRING},
                 time1: {type: Sequelize.INTEGER},
-                time2: {type: Sequelize.TEXT},
+                time2: {type: Sequelize.STRING},
                 data: {type: Sequelize.TEXT},
             });
 
-            let num = await Renren.count({
-                where: {
-                    id: {
-                        [Op.ne]: ''
-                    }
-                }
-            });
-            console.log(num, 'num 哈哈哈')
-
-            let a = await Renren.findOne({
-                where: {
-                    id: 10004
-                }
-            })
-            console.log(a, 'a')
             await Promise.all([
                 Renren.sync()
             ]);
-
 
             return {
                 Renren
