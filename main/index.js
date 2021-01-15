@@ -12,7 +12,8 @@ if (!gotTheLock) {
 async function appInit () {
     mainIPC();
     createMainWindow();
-    Menu.setApplicationMenu(null)
+    Menu.setApplicationMenu(null);
+
 }
 
 app.on('window-all-closed', function () {
