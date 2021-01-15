@@ -7,6 +7,11 @@
         <div class="search-result" v-text="result">
 
         </div>
+        <div class="page-box" v-if="count > 0">
+            <span class="page-btn" :class="{'current-page-btn': currentPage === item}" v-for="(item) in pageArray" :key="item" @click="doSearch(item === '...' ? -1 : item)">
+                {{item}}
+            </span>
+        </div>
     </div>
 </template>
 
@@ -38,7 +43,10 @@ export default {
         return {
             openInputClass: false,
             keyWord: '',
-            result: ''
+            result: '',
+            count: 0,
+            pageArray: [],
+            currentPage: 1
         }
     },
     directives: {
@@ -51,35 +59,57 @@ export default {
         closeSearchInput () {
             this.openInputClass = false;
         },
+        async doSearch (page = 1) {
+            console.log(page, 'page 会话')
+            if (page === -1) {
+                return false;
+            }
+            this.currentPage = page;
+            await this.search();
+        },
         async search () {
             if (!this.keyWord) {
                 alert('请输入关键词搜索！')
                 return false;
             }
-            const result = await ipcRenderer.invoke('searchFilm', {keyWord: this.keyWord});
+            const result = await ipcRenderer.invoke('searchFilm', {
+                keyWord: this.keyWord,
+                page: this.currentPage,
+                limit: 2
+            });
             console.log('结果', result)
 
-            if (result.length === 0) {
+            if (result.count === 0) {
                 alert('啥都没找到，谢谢搜索！')
             } else {
-                this.result = result;
-                if (Object.prototype.toString.call(result) === '[object Array]') {
-                    result.forEach(item => {
-                        try {
-                            let temp = JSON.parse(item.data)
-                            console.log(temp, 'temp')
-                        } catch (err) {
-                            console.log(err, 'parse 结果')
-                        }
-                    })
+                this.result = result.rows;
+                this.count = result.count;
+                let tempArray = new Array(Math.ceil(this.count / 2)).fill(1).map((item, index) => {
+                    return index + 1;
+                });
+
+                if (tempArray.length < 10) {
+                    this.pageArray = tempArray;
                 } else {
+                    if (this.currentPage <= 5) {
+                        this.pageArray = [1, 2, 3, 4, 5, '...', ...tempArray.slice(tempArray.length - 5)];
+                    } else {
+                        if (this.currentPage < tempArray.length - 5) {
+                            this.pageArray = [...tempArray.slice(this.currentPage - 4, this.currentPage + 1), '...', ...tempArray.slice(tempArray.length - 5)];
+                        } else {
+                            this.pageArray = [...tempArray.slice(tempArray.length - 10)];
+                        }
+                    }
+                }
+
+                result.rows.forEach(item => {
                     try {
-                        let temp = JSON.parse(result.data)
+                        let temp = JSON.parse(item.data)
                         console.log(temp, 'temp')
                     } catch (err) {
                         console.log(err, 'parse 结果')
                     }
-                }
+                })
             }
         }
     },
@@ -119,6 +149,20 @@ export default {
     }
     .search-result {
         word-break: break-all;
+    }
+    .page-box {
+        margin-top: 20px;
+        line-height: 30px;
+        .page-btn {
+            cursor: pointer;
+            margin: 5px;
+            &:hover {
+                border-bottom: 1px solid #9582ea;
+            }
+        }
+        .current-page-btn {
+            border-bottom: 1px solid #9582ea;
+        }
     }
 }
 

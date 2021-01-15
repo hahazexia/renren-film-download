@@ -19,9 +19,10 @@ function mainDBCURD () {
             searchFilm = async function (arg) {
                 console.log('mainDBCURD searchFilm')
                 let response = null;
+                let offset = arg.page === 1 ? 0 : (arg.page - 1) * arg.limit;
 
                 try {
-                    const result = await Renren.findAll({
+                    const result = await Renren.findAndCountAll({
                         raw: true,
                         where: {
                             name: {
@@ -31,9 +32,12 @@ function mainDBCURD () {
                                     [Op.like]: '%' + arg.keyWord + '%',
                                 }
                             }
-                        }
+                        },
+                        limit: arg.limit,
+                        offset: offset
                     });
                     console.log(result, 'searchFilm result')
+                    console.log(result.count, 'result.count')
                     if (result) {
                         response = result;
                     }

@@ -6,7 +6,9 @@ function mainIPC () {
         const mainDBCURD = await initMainDBCURD();
 
         let result = await mainDBCURD.searchFilm({
-            keyWord: arg.keyWord
+            keyWord: arg.keyWord,
+            page: arg.page,
+            limit: arg.limit
         });
 
         return result
