@@ -4,12 +4,14 @@ import Sequelize from 'sequelize';
 const Op = Sequelize.Op;
 
 function mainDBCURD () {
-    let searchFilm = null;
+    let searchFilm = null,
+        insertFilm = null;
 
     return async function () {
         if (searchFilm) {
             return {
-                searchFilm
+                searchFilm,
+                insertFilm
             }
         } else {
             const {
@@ -49,9 +51,18 @@ function mainDBCURD () {
                 return response;
             }
 
+            insertFilm = async function (arg) {
+                console.log('mainDBCURD insertFilm')
 
+                try {
+                    await Renren.upsert(arg);
+                } catch (err) {
+                    console.log('insertFilm err', err);
+                }
+            }
             return {
-                searchFilm
+                searchFilm,
+                insertFilm
             }
         }
     }

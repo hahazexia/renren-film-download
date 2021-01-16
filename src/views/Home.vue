@@ -441,7 +441,6 @@ export default {
             width: 140px;
             height: 20px;
             line-height: 20px;
-            border: 1px solid #9582ea;
             position: relative;
             .title {
                 font-size: 12px;
@@ -451,7 +450,6 @@ export default {
             position: absolute;
             top: 21px;
             left: 0;
-            border: 1px solid #9582ea;
             overflow: hidden;
             margin: 0;
             padding: 0;
