@@ -32,10 +32,12 @@
         </div>
         <div class="search-result">
             <div class="film-result" v-for="item in film" :key="item.id">
-                <div>
-                    <input type="checkbox" :value="item.id" v-model="selectedFilm" @change="filmChange($event, item)" :disabled="item.file.length === 0">
-                    <span class="film-name" v-html="item.name"></span>
-                </div>
+                <label :for="item.id">
+                    <div>
+                        <input :id="item.id" type="checkbox" :value="item.id" v-model="selectedFilm" @change="filmChange($event, item)" :disabled="item.file.length === 0">
+                        <span class="film-name" v-html="item.name"></span>
+                    </div>
+                </label>
                 <div class="channel">{{item.channel}}</div>
                 <div class="renren-url">
                     <a href="javascript:;" @click="openRenRenUrl(item.url)">{{item.url}}</a>
@@ -43,10 +45,12 @@
                 <div class="file-list">
                     <span class="parse-failed" v-if="item.file.length === 0">解析失败！</span>
                     <div class="file" v-for="data in item.file" :key="`${item.id}_${data.info.format}_${data.info.id}`">
-                        <div class="file-link" v-for="link in data" :key="`${link.way}_${data.info.id}`">
-                            <input type="checkbox" :value="link.address" v-model="selectedLink" @change="linkChange($event, link, item.id)">
-                            <span class="link" v-text="`${data.info.format} | ${link.way_cn} | ${data.info.name} | ${data.info.size}`" :title="link.address" @click.right="rightMenuOpen(link, $event)"></span>
-                        </div>
+                            <div class="file-link" v-for="link in data" :key="`${link.way}_${data.info.id}`">
+                                <label :for="link.address">
+                                    <input :id="link.address" type="checkbox" :value="link.address" v-model="selectedLink" @change="linkChange($event, link, item.id)">
+                                    <span class="link" v-text="`${data.info.format} | ${link.way_cn} | ${data.info.name} | ${data.info.size}`" :title="link.address" @click.right="rightMenuOpen(link, $event)"></span>
+                                </label>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -514,6 +518,7 @@ export default {
         .film-result {
             margin: 20px 0;
             .film-name {
+                cursor: pointer;
                 color: rgba(22, 141, 18, 0.952);
             }
             .parse-failed {
