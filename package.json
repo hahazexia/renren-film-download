@@ -10,8 +10,9 @@
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
-    "pack:win": "npm run build && cross-env ELECTRON_MIRROR='https://npm.taobao.org/mirrors/electron/' electron-builder --win --ia32 --projectDir ./",
-    "build": "npm run build:renderer && npm run build:main"
+    "pack:win": "npm run build && cross-env ELECTRON_MIRROR='https://npm.taobao.org/mirrors/electron/' electron-builder --win --ia32 --projectDir ./ --config ./electron-builder.yml",
+    "build": "npm run rm && npm run build:renderer && npm run build:main",
+    "rm": "rm -rf ./release && rm -rf ./dist"
   },
   "main": "./dist/index.js",
   "dependencies": {
@@ -45,41 +46,6 @@
     "vuex": "^3.4.0",
     "webpack": "^5.13.0",
     "webpack-cli": "^4.3.1"
-  },
-  "build": {
-    "asar": true,
-    "files": [
-      "**/*",
-      "dist/**/*",
-      "!src/*",
-      "!public/*",
-      "!dist_electron/*",
-      "!vue.config.js",
-      "!babel.config.js",
-      "!.env",
-      "!webpack.config.main.js",
-      "!yarn.lock",
-      "!.env",
-      "!gitignore",
-      "!editorconfig",
-      "!browserslistrc"
-    ],
-    "productName": "renren-film-download",
-    "appId": "hahazexia",
-    "compression": "maximum",
-    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
-    "win": {
-      "target": "nsis",
-      "icon": "./icons/icon.ico"
-    },
-    "nsis": {
-      "oneClick": false,
-      "perMachine": true,
-      "allowToChangeInstallationDirectory": true
-    },
-    "directories": {
-      "output": "./release"
-    }
   },
   "keywords": [
     "renren"

@@ -11,7 +11,7 @@ module.exports = {
   target: 'electron-main',
   entry: path.resolve(__dirname, './main/index.js'),
   output: {
-    path: path.join(__dirname, './app'),
+    path: path.join(__dirname, './dist'),
     filename: 'index.js',
     libraryTarget: 'commonjs2',
   },
@@ -54,14 +54,6 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'production'
-    }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, './package.json'),
-          to: path.join(__dirname, './app')
-        }
-      ]
     })
   ],
   node: {

@@ -1,0 +1,37 @@
+appId: hahazexia
+productName: "renren-film-download"
+copyright: Copyright © year ${author}
+
+asar: true
+
+files:
+  - "**/*"
+  - "dist/**/*"
+  - "!src/*"
+  - "!public/*"
+  - "!dist_electron/*"
+  - "!vue.config.js"
+  - "!babel.config.js"
+  - "!.env"
+  - "!webpack.config.main.js"
+  - "!yarn.lock"
+  - "!.env"
+  - "!gitignore"
+  - "!editorconfig"
+  - "!browserslistrc"
+
+directories:
+  output: "release"
+
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  warningsAsErrors: false
+  allowElevation: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+
+win:
+  target: nsis
+  icon: "icons/icon.ico"
