@@ -114,45 +114,109 @@
           },
           {
             "way":"2",
-            "way_cn":"磁力","address":"magnet:?xt=urn:btih:1c49c0373c75e20ac61d34c424bc5f345b890d72&tr.0=http://tracker.openbittorrent.com/announce&tr.1=udp://tracker.openbittorrent.com:80/announce&tr.2=http://tracker.thepiratebay.org/announce&tr.3=http://tracker.publicbt.com/announce&tr.4=http://tracker.prq.to/announce&tr.5=udp://tracker.publicbt.com:80/announce","passwd":""
+            "way_cn":"磁力",
+            "address":"magnet:?xt=urn:btih:1c49c0373c75e20ac61d34c424bc5f345b890d72&tr.0=http://tracker.openbittorrent.com/announce&tr.1=udp://tracker.openbittorrent.com:80/announce&tr.2=http://tracker.thepiratebay.org/announce&tr.3=http://tracker.publicbt.com/announce&tr.4=http://tracker.prq.to/announce&tr.5=udp://tracker.publicbt.com:80/announce",
+            "passwd":""
           }
           ],
           [
-            {"way":"1","way_cn":"电驴","address":"ed2k://|file|%E8%B6%85%E5%87%A1%E8%9C%98%E8%9B%9B%E4%BE%A0.The.Amazing.Spiderman.2012.BD-MP4-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86%E5%8E%9F%E5%88%9B%E7%BF%BB%E8%AF%91%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95V2.mp4|816915235|e4ee377d6bc529fa1e6ff77f07b410b0|h=sd72lw474sdfiyrrmyjnmgzws6xpy3qe|/","passwd":""
+            {"way":"1",
+            "way_cn":"电驴",
+            "address":"ed2k://|file|%E8%B6%85%E5%87%A1%E8%9C%98%E8%9B%9B%E4%BE%A0.The.Amazing.Spiderman.2012.BD-MP4-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86%E5%8E%9F%E5%88%9B%E7%BF%BB%E8%AF%91%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95V2.mp4|816915235|e4ee377d6bc529fa1e6ff77f07b410b0|h=sd72lw474sdfiyrrmyjnmgzws6xpy3qe|/",
+            "passwd":""
           },
             {
-              "way":"2","way_cn":"磁力","address":"magnet:?xt=urn:btih:30b969f022a4199664f2cd9c03541666d0798e4e&tr.0=http://tracker.openbittorrent.com/announce&tr.1=udp://tracker.openbittorrent.com:80/announce&tr.2=http://tracker.thepiratebay.org/announce&tr.3=http://tracker.publicbt.com/announce&tr.4=http://tracker.prq.to/announce&tr.5=udp://tracker.publicbt.com:80/announce","passwd":""
+              "way":"2",
+              "way_cn":"磁力",
+              "address":"magnet:?xt=urn:btih:30b969f022a4199664f2cd9c03541666d0798e4e&tr.0=http://tracker.openbittorrent.com/announce&tr.1=udp://tracker.openbittorrent.com:80/announce&tr.2=http://tracker.thepiratebay.org/announce&tr.3=http://tracker.publicbt.com/announce&tr.4=http://tracker.prq.to/announce&tr.5=udp://tracker.publicbt.com:80/announce",
+              "passwd":""
             }
         ],
         [
-          {"way":"1","way_cn":"电驴","address":"ed2k://|file|%E8%B6%85%E5%87%A1%E8%9C%98%E8%9B%9B%E4%BE%A0.The.Amazing.Spiderman.2012.BD-RMVB-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86%E5%8E%9F%E5%88%9B%E7%BF%BB%E8%AF%91%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95V2.rmvb|649053637|759f81650fc2cb4ee5c3a3ad03fd124a|h=25ld5itpuivk73dbz6i5ooasd5ogwkkj|/","passwd":""},
-          {"way":"2","way_cn":"磁力","address":"magnet:?xt=urn:btih:859593ae136d6cd21a128586bab6df592ff16ba3&tr.0=http://tracker.openbittorrent.com/announce&tr.1=udp://tracker.openbittorrent.com:80/announce&tr.2=http://tracker.thepiratebay.org/announce&tr.3=http://tracker.publicbt.com/announce&tr.4=http://tracker.prq.to/announce&tr.5=udp://tracker.publicbt.com:80/announce","passwd":""}
+          {
+            "way":"1",
+            "way_cn":"电驴",
+            "address":"ed2k://|file|%E8%B6%85%E5%87%A1%E8%9C%98%E8%9B%9B%E4%BE%A0.The.Amazing.Spiderman.2012.BD-RMVB-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86%E5%8E%9F%E5%88%9B%E7%BF%BB%E8%AF%91%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95V2.rmvb|649053637|759f81650fc2cb4ee5c3a3ad03fd124a|h=25ld5itpuivk73dbz6i5ooasd5ogwkkj|/",
+            "passwd":""
+          },
+          {
+            "way":"2",
+            "way_cn":"磁力",
+            "address":"magnet:?xt=urn:btih:859593ae136d6cd21a128586bab6df592ff16ba3&tr.0=http://tracker.openbittorrent.com/announce&tr.1=udp://tracker.openbittorrent.com:80/announce&tr.2=http://tracker.thepiratebay.org/announce&tr.3=http://tracker.publicbt.com/announce&tr.4=http://tracker.prq.to/announce&tr.5=udp://tracker.publicbt.com:80/announce",
+          "passwd":""
+        }
         ],
-        [{"way":"2","way_cn":"磁力","address":"magnet:?xt=urn:btih:6GQ4BWR6K67NJ4E5ONTBH4PVIBM6FYMQ&tr=udp://tracker.publichd.eu/announce&tr=udp://tracker.1337x.org:80/announce&tr=http://fr33dom.h33t.com:3310/announce","passwd":""}
+        [
+          {
+            "way":"2",
+            "way_cn":"磁力",
+            "address":"magnet:?xt=urn:btih:6GQ4BWR6K67NJ4E5ONTBH4PVIBM6FYMQ&tr=udp://tracker.publichd.eu/announce&tr=udp://tracker.1337x.org:80/announce&tr=http://fr33dom.h33t.com:3310/announce",
+            "passwd":""
+          }
       ],
         [
-          {"way":"1","way_cn":"电驴","address":"ed2k://|file|The.Amazing.Spiderman.2012.1080p.BluRay.x264.DTS-PTpOWeR.mkv|10096929757|5C24927ED0BF07227B4F9A107EE64900|h=FYHQVWN5HMIIQVPGWJPF6O5K3FW2W6S3|/","passwd":""}
+          {
+            "way":"1",
+            "way_cn":"电驴",
+            "address":"ed2k://|file|The.Amazing.Spiderman.2012.1080p.BluRay.x264.DTS-PTpOWeR.mkv|10096929757|5C24927ED0BF07227B4F9A107EE64900|h=FYHQVWN5HMIIQVPGWJPF6O5K3FW2W6S3|/",
+            "passwd":""
+          }
         ],
           [
-            {"way":"2","way_cn":"磁力","address":"magnet:?xt=urn:btih:LPLBIEGB2OWA3NLGWVTSJ5LFQDHEIW5Q&tr=udp://tracker.publichd.eu/announce&tr=udp://tracker.1337x.org:80/announce&tr=http://fr33dom.h33t.com:3310/announce","passwd":""}
+            {
+              "way":"2",
+              "way_cn":"磁力",
+              "address":"magnet:?xt=urn:btih:LPLBIEGB2OWA3NLGWVTSJ5LFQDHEIW5Q&tr=udp://tracker.publichd.eu/announce&tr=udp://tracker.1337x.org:80/announce&tr=http://fr33dom.h33t.com:3310/announce",
+              "passwd":""
+            }
           ],
           [
-            {"way":"2","way_cn":"磁力","address":"magnet:?xt=urn:btih:FVIMQNC3HSN3WJCQHF3V57P5MRLAOU5E&tr=udp://tracker.publichd.eu/announce&tr=udp://tracker.1337x.org:80/announce&tr=http://fr33dom.h33t.com:3310/announce","passwd":""}
+            {
+              "way":"2",
+              "way_cn":"磁力",
+              "address":"magnet:?xt=urn:btih:FVIMQNC3HSN3WJCQHF3V57P5MRLAOU5E&tr=udp://tracker.publichd.eu/announce&tr=udp://tracker.1337x.org:80/announce&tr=http://fr33dom.h33t.com:3310/announce",
+              "passwd":""
+            }
           ],
           [
-            {"way":"1","way_cn":"电驴","address":"ed2k://|file|The.Amazing.Spiderman.2012.iNTERNAL.REPACK.720p.BluRay.x264-BRHD.[PublicHD].mkv|5861640283|9E599B412548A03261DF47A6C4428571|h=BUHQPBZ32XPYQDOFB352IMOJ4VMQ4PDP|/","passwd":""}
+            {
+              "way":"1",
+              "way_cn":"电驴",
+              "address":"ed2k://|file|The.Amazing.Spiderman.2012.iNTERNAL.REPACK.720p.BluRay.x264-BRHD.[PublicHD].mkv|5861640283|9E599B412548A03261DF47A6C4428571|h=BUHQPBZ32XPYQDOFB352IMOJ4VMQ4PDP|/",
+              "passwd":""
+            }
           ],
           [
-            {"way":"1","way_cn":"电驴","address":"ed2k://|file|James.Horner.-.%5B%E8%B6%85%E5%87%A1%E8%9C%98%E8%9B%9B%E4%BE%A0.-.The.Amazing.Spider-Man%5D.%E4%B8%93%E8%BE%91.%28mp3%29.zip|175900256|e364b6bec3c6479571617c6317005f37|h=bjubr46kc36csjnnffvsza4ayn7rqj6t|/","passwd":""}
+            {
+              "way":"1",
+            "way_cn":"电驴",
+            "address":"ed2k://|file|James.Horner.-.%5B%E8%B6%85%E5%87%A1%E8%9C%98%E8%9B%9B%E4%BE%A0.-.The.Amazing.Spider-Man%5D.%E4%B8%93%E8%BE%91.%28mp3%29.zip|175900256|e364b6bec3c6479571617c6317005f37|h=bjubr46kc36csjnnffvsza4ayn7rqj6t|/",
+            "passwd":""
+          }
           ],
           [
-            {"way":"1","way_cn":"电驴","address":"ed2k://|file|James.Horner.-.%5B%E8%B6%85%E5%87%A1%E8%9C%98%E8%9B%9B%E4%BE%A0.-.The.Amazing.Spider-Man%5D.%E4%B8%93%E8%BE%91.%28FLAC%29.rar|372442700|599e35f6787974efbe36237fdec75665|/","passwd":""}
+            {
+              "way":"1",
+              "way_cn":"电驴",
+              "address":"ed2k://|file|James.Horner.-.%5B%E8%B6%85%E5%87%A1%E8%9C%98%E8%9B%9B%E4%BE%A0.-.The.Amazing.Spider-Man%5D.%E4%B8%93%E8%BE%91.%28FLAC%29.rar|372442700|599e35f6787974efbe36237fdec75665|/",
+              "passwd":""
+            }
           ],
           [
-            {"way":"1","way_cn":"电驴","address":"ed2k://|file|%5B%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81%5D.The.Amazing.SpiderMan.CHS.Patch.V1.0-3DM.exe|12615986|d6b098b57485965f62e55b4a706dc549|h=olhumpumsupliwd6vp5fzz4td4uxcjoi|/","passwd":""}
+            {
+              "way":"1",
+              "way_cn":"电驴",
+              "address":"ed2k://|file|%5B%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81%5D.The.Amazing.SpiderMan.CHS.Patch.V1.0-3DM.exe|12615986|d6b098b57485965f62e55b4a706dc549|h=olhumpumsupliwd6vp5fzz4td4uxcjoi|/",
+              "passwd":""
+            }
           ],
           [
-            {"way":"1","way_cn":"电驴","address":"ed2k://|file|%5B%E7%A5%9E%E5%A5%87%E8%9C%98%E8%9B%9B%E4%BE%A0%5D.The.Amazing.Spider.Man.ENG.full.rip-RAS.rar|7260958087|f0598b443bb358ee39e6a2c312b0c0f8|h=lejkgmxys4as4gcumzyxpwdtr22dvalq|/","passwd":""}
+            {
+              "way":"1",
+              "way_cn":"电驴",
+              "address":"ed2k://|file|%5B%E7%A5%9E%E5%A5%87%E8%9C%98%E8%9B%9B%E4%BE%A0%5D.The.Amazing.Spider.Man.ENG.full.rip-RAS.rar|7260958087|f0598b443bb358ee39e6a2c312b0c0f8|h=lejkgmxys4as4gcumzyxpwdtr22dvalq|/",
+              "passwd":""
+            }
           ]
         ]
       }
