@@ -63,18 +63,13 @@
       "!editorconfig",
       "!browserslistrc"
     ],
-    "productName": "zhumuClient",
-    "appId": "com.suirui.zhumu",
+    "productName": "renren-film-download",
+    "appId": "hahazexia",
     "compression": "maximum",
     "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
     "win": {
       "target": "nsis",
       "icon": "./icons/icon.ico"
-    },
-    "mac": {
-      "target": "pkg",
-      "icon": "./icons/icon.icns",
-      "gatekeeperAssess": true
     },
     "nsis": {
       "oneClick": false,
