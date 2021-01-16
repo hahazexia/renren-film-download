@@ -478,9 +478,11 @@ export default {
         text-align: center;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-size: 12px;
     }
     .select-all-box {
         -webkit-user-select: none;
+        font-size: 12px;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -494,6 +496,7 @@ export default {
     }
     .copy-all-box {
         -webkit-user-select: none;
+        font-size: 12px;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -541,6 +544,7 @@ export default {
         text-align: center;
         margin-top: 20px;
         line-height: 30px;
+        font-size: 12px;
         .page-btn {
             display: inline-block;
             padding: 10px;

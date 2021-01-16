@@ -19,9 +19,9 @@ function createMainWindow () {
     global.mainWindow = mainWindow;
     mainWindow.loadURL(windowConstants.mainWindowUrl);
 
-    // if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {
         mainWindow.webContents.openDevTools({mode: 'bottom'});
-    // }
+    }
 
     mainWindow.once('ready-to-show', () => {
         mainWindow.show();
