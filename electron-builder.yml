@@ -18,7 +18,10 @@ files:
   - "!.env"
   - "!gitignore"
   - "!editorconfig"
-  - "!browserslistrc"
+  - "!.browserslistrc"
+  - "!icons/*"
+  - "!main/*"
+  - "!data_demo.js"
 
 directories:
   output: "release"
