@@ -33,14 +33,15 @@
         <div class="search-result">
             <div class="film-result" v-for="item in film" :key="item.id">
                 <div>
-                    <input type="checkbox" :value="item.id" v-model="selectedFilm" @change="filmChange($event, item)">
-                    <span v-html="item.name"></span>
+                    <input type="checkbox" :value="item.id" v-model="selectedFilm" @change="filmChange($event, item)" :disabled="item.file.length === 0">
+                    <span class="film-name" v-html="item.name"></span>
                 </div>
                 <div class="channel">{{item.channel}}</div>
                 <div class="renren-url">
                     <a href="javascript:;" @click="openRenRenUrl(item.url)">{{item.url}}</a>
                 </div>
                 <div class="file-list">
+                    <span class="parse-failed" v-if="item.file.length === 0">解析失败！</span>
                     <div class="file" v-for="data in item.file" :key="`${item.id}_${data.info.format}_${data.info.id}`">
                         <div class="file-link" v-for="link in data" :key="`${link.way}_${data.info.id}`">
                             <input type="checkbox" :value="link.address" v-model="selectedLink" @change="linkChange($event, link, item.id)">
@@ -51,9 +52,11 @@
             </div>
         </div>
         <div class="page-box" v-if="count > 0">
+            <span class="page-btn" v-if="currentPage !== 1" @click="doSearch(currentPage - 1)">上一页</span>
             <span class="page-btn" :class="{'current-page-btn': currentPage === item}" v-for="(item) in pageArray" :key="item" @click="doSearch(item === '...' ? -1 : item)">
                 {{item}}
             </span>
+            <span class="page-btn" v-if="currentPage !== lastPage" @click="doSearch(currentPage + 1)">下一页</span>
         </div>
     </div>
 </template>
@@ -415,7 +418,7 @@ export default {
         box-sizing: border-box;
         width: 300px;
         padding: 0.05em 0;
-        color: #9582ea;
+        color: #5e0b96;
         border: none;
         border-bottom: 1px solid;
         outline: none;
@@ -437,7 +440,7 @@ export default {
         margin-left: 20px;
         position: relative;
         .select {
-            color: #9582ea;
+            color: #5e0b96;
             width: 140px;
             height: 20px;
             line-height: 20px;
@@ -455,7 +458,7 @@ export default {
             padding: 0;
             background-color: #fff;
             li {
-                color: #9582ea;
+                color: #5e0b96;
                 font-size: 12px;
                 width: 140px;
                 height: 20px;
@@ -464,7 +467,7 @@ export default {
                 list-style: none;
                 &:hover {
                     color: #fff;
-                    background-color: #9582ea;
+                    background-color: #5e0b96;
                 }
             }
         }
@@ -485,7 +488,7 @@ export default {
             cursor: pointer;
             margin: 10px;
             &:hover {
-                color: #9582ea;
+                color: #5e0b96;
             }
         }
     }
@@ -507,8 +510,15 @@ export default {
         word-break: break-all;
         .film-result {
             margin: 20px 0;
+            .film-name {
+                color: rgba(22, 141, 18, 0.952);
+            }
+            .parse-failed {
+                color: red;
+            }
             .renren-url {
                 a {
+                    color: rgba(0, 145, 212, 0.719);
                     text-decoration: none;
                 }
             }
@@ -519,6 +529,9 @@ export default {
                 }
                 .link {
                     cursor: pointer;
+                    &:hover {
+                        color: #5e0b96;
+                    }
                 }
             }
         }
@@ -529,14 +542,18 @@ export default {
         margin-top: 20px;
         line-height: 30px;
         .page-btn {
+            display: inline-block;
+            padding: 10px;
             cursor: pointer;
             margin: 5px;
+            text-align: center;
             &:hover {
-                border-bottom: 1px solid #9582ea;
+                border-bottom: 1px solid #5e0b96;
+                color: #5e0b96;
             }
         }
         .current-page-btn {
-            border-bottom: 1px solid #9582ea;
+            border-bottom: 1px solid #5e0b96;
         }
     }
 }
